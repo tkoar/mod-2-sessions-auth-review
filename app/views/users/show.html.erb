@@ -1,0 +1,7 @@
+<div class="ui segment">
+  <h2><%= @user.name %></h2>
+  <ul>
+    <li><%= @user.email %></li>
+  </ul>
+<%= button_to "Edit #{@user.name}", edit_user_path(@user), method: 'get' %>
+</div>

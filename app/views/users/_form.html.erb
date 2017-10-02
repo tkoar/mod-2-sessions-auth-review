@@ -1,0 +1,14 @@
+<%= form_for @user, html: {class: "ui form"} do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, html: {class: "field"}%>
+  <br><br>
+  <%= f.label :email %>
+  <%= f.email_field :email, html: {class: "field"} %>
+  <br><br>
+  <%= f.label :password %>
+  <%= f.password_field :password, html: {class: "field"} %>
+  <br>
+  <%= f.password_field :password_confirmation, html: {class: "field"} %>
+  <br><br>
+  <%= f.submit class: "ui button" %>
+<% end %>
