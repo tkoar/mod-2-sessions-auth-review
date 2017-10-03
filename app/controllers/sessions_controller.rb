@@ -10,17 +10,17 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email])
     if user && user.authenticate(params[:session][:password])
       session[:id] = user.id
-      flash[:login] = "Nice! Welcome back #{user.name} 😘"
+      flash[:success] = "Nice! Welcome back #{user.name} 😘"
       redirect_to user_path(user)
     else
       flash[:error] = "Looks like we couldn't verify your information"
-      redirect_to login_path
+      redirect_to signin_path
     end
   end
 
   def logout
     session[:id] = nil
-    flash[:logout] = "Successfully logged out! See you soon, we hope!"
+    flash[:success] = "Successfully logged out! See you soon, we hope!"
     redirect_to root_path
   end
 end
