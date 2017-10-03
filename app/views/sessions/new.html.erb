@@ -1,0 +1,12 @@
+<div class='ui raised very padded text container segment'>
+<h1 class='iu header'>Sign-in</h1>
+<%= form_for :session, url: signin_path, method: 'post', html: {class: "ui form"} do |f| %>
+    <%= f.label :email %>
+    <%= f.email_field :email, html: {class: "field"} %>
+    <br><br>
+    <%= f.label :password %>
+    <%= f.password_field :password, html: {class: "field"} %>
+    <br>
+  <%= f.submit "Signin!", class: "ui button" %>
+  <% end %>
+</div>

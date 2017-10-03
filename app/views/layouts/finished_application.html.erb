@@ -12,6 +12,8 @@
       crossorigin="anonymous"></script>
     <script src="semantic/dist/semantic.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="public/semantic/dist/semantic.min.css">
+
   </head>
 
   <body>
@@ -27,7 +29,7 @@
         <% else %>
           <div class="item"><%= link_to "Homepage", root_path, class: 'item' %></div>
           <div class="item"><%= link_to "Signup", sign_up_path, class: 'ui button'%></div>
-          <div class="item"><%= link_to "Sign in", signin_path, class: 'ui button'%></div>
+          <div class="item"><%= link_to "Sign in", login_path, class: 'ui button'%></div>
         <% end %>
       </div>
     </div>
